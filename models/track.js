@@ -1,0 +1,20 @@
+const sequelize = require("../database/sequlize");
+const Sequelize = require("sequelize");
+
+module.exports = sequelize.define(
+  "track",
+  {
+    id: {
+      field: "TrackId",
+      type: Sequelize.INTEGER,
+      primaryKey: true
+    },
+    name: {
+      field: "Name",
+      type: Sequelize.STRING
+    }
+  },
+  {
+    timestamps: false
+  }
+);
